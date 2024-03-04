@@ -6,12 +6,13 @@ const [name, setName] = useState("")
 
 const [click, setClick] = useState("")
 
-  const handleChange = () => {
-
+  const handleChange = (e) => {
+e
 setName(e.target.value)
+console.log(e.target.type)
 
   }
-const handleClick = (e) => {
+const handleClick = () => {
   setClick(name)
 }
 
@@ -22,7 +23,7 @@ const handleClick = (e) => {
       <input onChange={handleChange}
        type="text" 
        placeholder="What's your name?"
-       value={click} />
+       value={name} />
       <button onClick={handleClick}>Submit</button>
     </div>
   );
